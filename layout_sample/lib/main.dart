@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -97,13 +95,12 @@ class MyApp extends StatelessWidget {
 
 class FavoriteWidget extends StatefulWidget {
   @override
-  _FavoriteWidgetState createState89 => _FavoriteWidgetState();
+  _FavoriteWidgetState createState() => _FavoriteWidgetState();
 }
 
 class _FavoriteWidgetState extends State<FavoriteWidget> {
   bool _isFavorited = true;
   int _favoriteCount = 41;
-
 
   @override
   Widget build(BuildContext context) {
@@ -120,9 +117,10 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
           ),
         ),
         SizedBox(
-          width: 18,
-          child: Container(child: Text('$_favoriteCount'),)
-        )
+            width: 18,
+            child: Container(
+              child: Text('$_favoriteCount'),
+            ))
       ],
     );
   }
